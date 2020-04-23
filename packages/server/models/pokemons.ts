@@ -5,12 +5,7 @@ import { identity } from "fp-ts/lib/function";
 import { data } from "../data/pokemons";
 import { toConnection, slice } from "../functions";
 import { Connection } from "../types";
-
-interface Pokemon {
-  id: string;
-  name: string;
-  types: string[];
-}
+import Pokemon from "./Ipokemon";
 
 const SIZE = 10;
 
@@ -32,12 +27,12 @@ export function query(args: {
     after === undefined
       ? identity
       : as =>
-          pipe(
-            as,
-            A.findIndex(a => a.id === after),
-            O.map(a => a + 1),
-            O.fold(() => as, idx => as.slice(idx))
-          );
+        pipe(
+          as,
+          A.findIndex(a => a.id === after),
+          O.map(a => a + 1),
+          O.fold(() => as, idx => as.slice(idx))
+        );
 
   const results: Pokemon[] = pipe(
     data,
