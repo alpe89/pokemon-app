@@ -33,8 +33,13 @@ module.exports = {
       {
         enforce: "pre",
         test: /\.js$/,
-        loader: "source-map-loader"
-      }
+        use: ['babel-loader', 'source-map-loader'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }],
+      },
     ]
   },
 
@@ -42,5 +47,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
-  ]
+  ],
+
+  performance: {
+    hints: false
+  }
 };
