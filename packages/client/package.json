@@ -1,5 +1,5 @@
 {
-  "name": "@frontend-assignment/client",
+  "name": "@pokemon-app/client",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
