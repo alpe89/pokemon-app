@@ -1,6 +1,6 @@
 # Pokemon App
 
-> Because building a new app for something easily searchable by Google is cool 😎
+> Because building a new app for something easily searchable by Google is cool 😎 <strike>(at least is not a todo app!)</strike>
 
 This project is just a Demo that provides the possibility to search Pokemons by name or by type.
 I've never used GraphQL before and now I kind of like it 🔥
