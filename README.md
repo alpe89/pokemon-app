@@ -5,7 +5,13 @@
 This project is just a Demo that provides the possibility to search Pokemons by name or by type.
 I've never used GraphQL before and now I kind of like it 🔥
 
-To start the project just run in two different terminal tabs
+In order to see it in action, first:
+
+```
+yarn install
+```
+
+Then to start the project just run in two different terminal tabs
 
 ```
 yarn workspace @pokemon-app/server start
